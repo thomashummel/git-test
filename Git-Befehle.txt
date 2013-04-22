@@ -1,0 +1,54 @@
+
+## SSH Key erzeugen
+## In Git Bash nachfolgenden Befehl absetzen
+ssh-keygen
+
+
+## Generierter SSH Key anzeigen lassen
+cat .ssh/id_rsa.pub
+
+## Neuer SSH Key in github hinterlegen
+ -> Edit your profile
+ -> SSH Keys
+ -> Add SSH Key
+ 
+
+## In github geforktes Repository auf das lokale Entwicklungssystem laden
+git clone https://github.com/thomashummel/git-test.git
+
+
+## In das Verzeichnis des gerade geladenen Repositories wechseln
+cd git-test
+
+
+## Status des lokalen git Repositorys anzeigen
+git status
+
+
+## Lokale Änderungen in das Repository von github senden
+git push
+
+
+## Remote Repositories anzeigen
+git remote -v
+
+## Remote Repository bei lokalen lokalem Git registrieren
+## SSH
+git remote add otrosien git://github.com/otrosien/git-test.git
+
+## HTTPS
+git remote add otrosien https://github.com/otrosien/git-test.git
+
+## URL des Remote Repository ändern
+git remote set-url otrsien https://github.com/otrosien/git-test.git
+
+## Änderugnen aus dem Ursprünglichen GIT Repository laden
+git pull otrosien master
+
+
+## Neuer Branch anlegen. Befehl muss im root des lokalen Repositories abgesetzt werden
+git checkout -b feature/TH
+
+## neuer Branch an github repository senden
+git push origin feature/TH
+
